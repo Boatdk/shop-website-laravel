@@ -12,9 +12,23 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages.home');
 });
 
-Route::get('/home', function() {
-    return view('pages/home');
+Route::get('/shop', function() {
+    return view('pages.shop');
 });
+
+Route::get('check-connect',function(){
+    if(DB::connection()->getDatabaseName())
+    {
+    return "Yes! successfully connected to the DB: " . DB::connection()->getDatabaseName();
+    }else{
+    return 'Connection False !!';
+    }
+    
+   });
+
+Route::get('shop/test', 'ShopController@show');
+
+Route::resource('product', 'ProductController');

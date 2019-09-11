@@ -2,7 +2,7 @@
   <!-- Classy Menu -->
   <nav class="classy-navbar" id="essenceNav">
       <!-- Logo -->
-      <a class="nav-brand" href="<?php echo url('home');?>"><img src="img/core-img/logo.png" alt=""></a>
+      <a class="nav-brand" href="<?php echo url('home');?>"><img src="img/home/bg-cover.png" alt="" width="120px" height="50px"></a>
       <!-- Navbar Toggler -->
       <div class="classy-navbar-toggler">
           <span class="navbarToggler"><span></span><span></span><span></span></span>

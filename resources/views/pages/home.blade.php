@@ -104,7 +104,7 @@
             <div class="col-12 col-sm-6 col-md-4">
                 <div class="single_catagory_area d-flex align-items-center justify-content-center bg-img" style="background-image: url(img/bg-img/bg-2.jpg);">
                     <div class="catagory-content">
-                        <a href="#">Clothing</a>
+                        <a href="/shop">Clothing</a>
                     </div>
                 </div>
             </div>
@@ -112,7 +112,7 @@
             <div class="col-12 col-sm-6 col-md-4">
                 <div class="single_catagory_area d-flex align-items-center justify-content-center bg-img" style="background-image: url(img/bg-img/bg-3.jpg);">
                     <div class="catagory-content">
-                        <a href="#">Shoes</a>
+                        <a href="/shop">Shoes</a>
                     </div>
                 </div>
             </div>
@@ -120,7 +120,7 @@
             <div class="col-12 col-sm-6 col-md-4">
                 <div class="single_catagory_area d-flex align-items-center justify-content-center bg-img" style="background-image: url(img/bg-img/bg-4.jpg);">
                     <div class="catagory-content">
-                        <a href="#">Accessories</a>
+                        <a href="/shop">Accessories</a>
                     </div>
                 </div>
             </div>
