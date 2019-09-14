@@ -29,6 +29,15 @@ Route::get('check-connect',function(){
     
    });
 
-Route::get('shop/test', 'ShopController@show');
+Route::resource('product', 'ProductController');    
 
-Route::resource('product', 'ProductController');
+Route::get('getProducts', 'ProductsController@getProduct');
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/res', function(){
+    return view('pages.register');
+});

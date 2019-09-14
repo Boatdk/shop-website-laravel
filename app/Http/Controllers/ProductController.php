@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Product;
+use App\Products;
 
 class ProductController extends Controller
 {
@@ -14,7 +14,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-      return view('pages.product');
+        return view('pages/product');
     }
 
     /**
@@ -24,7 +24,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-      
+        return view('pages/product');
     }
 
     /**
@@ -35,24 +35,32 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request,[
-            'product_name' => 'required', 'product_price' => 'required'
+        $this->validate($request, [
+            'product_name' => 'required',
+            'product_code' => 'required',
+            'product_type' => 'required',
+            'product_color' => 'required',
+            'product_brand' => 'required',
+            'product_size' => 'required',
+            'product_volume' => 'required',
+            'product_price' => 'required',
+            'product_image' => 'required',
+
         ]);
-        $product = new Product(
-            [
-                'code' => $request->get('product_code'),
-                'name' => $request->get('product_name'),
-                'type' => $request->get('product_size'),
-                'color' => $request->get('product_color'),
-                'brand' => $request->get('product_brand'),
-                'size' => $request->get('product_size'),
-                'volume' => $request->get('product_volume'),
-                'price' => $request->get('product_price'),
-                'image' => $request->get('product_image')
-            ]
-        );
+
+        $product = new Products([
+            'code' => $request->get('product_code'),
+            'name' => $request->get('product_name'),
+            'type' => $request->get('product_type'),
+            'color' => $request->get('product_color'),
+            'brand' => $request->get('product_brand'),
+            'size' => $request->get('product_size'),
+            'volume' => $request->get('product_volume'),
+            'price' => $request->get('product_price'),
+            'image' => $request->get('product_image'),
+        ]);
         $product->save();
-        return redirect()->route('pages.home')->with('success', 'finish');
+        return redirect()->route('pages.product')->with('success', 'Data added');
     }
 
     /**

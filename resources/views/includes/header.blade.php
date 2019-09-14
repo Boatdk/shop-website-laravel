@@ -2,7 +2,7 @@
   <!-- Classy Menu -->
   <nav class="classy-navbar" id="essenceNav">
       <!-- Logo -->
-      <a class="nav-brand" href="<?php echo url('home');?>"><img src="img/home/bg-cover.png" alt="" width="120px" height="50px"></a>
+      <a class="nav-brand" href="<?php echo url('/');?>"><img src="img/home/bg-cover.png" alt="" width="120px" height="50px"></a>
       <!-- Navbar Toggler -->
       <div class="classy-navbar-toggler">
           <span class="navbarToggler"><span></span><span></span><span></span></span>
@@ -59,7 +59,7 @@
                           <li><a href="contact.html">Contact</a></li>
                       </ul>
                   </li>
-                  <li><a href="blog.html">Blog</a></li>
+                  <li><a href="product">Product Management</a></li>
                   <li><a href="contact.html">Contact</a></li>
               </ul>
           </div>
